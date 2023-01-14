@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/media-queries.css">
     <title>Website</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
                 <img src="./assets/asset 1.png" alt="company logo">
 
             </a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-links">
                 <ul class="flex">
                     <li><a href="#" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customer</a></li>
@@ -35,6 +36,9 @@
                 </ul>
 
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
     <!--HEADER SECTION-->
@@ -59,13 +63,13 @@
                 The world’s best companies rely on UsabilityHub to make better design decisions.
             </div>
             <div class="logos flex">
-                <img class="logo" src="./assets/asset 3.png" alt="company1">
-                <img class="logo" src="./assets/asset 4.png" alt="company2">
-                <img class="logo" src="./assets/asset 5.png" alt="company3">
-                <img class="logo" src="./assets/asset 6.png" alt="company4">
-                <img class="logo" src="./assets/asset 7.png" alt="company5">
-                <img class="logo" src="./assets/asset 8.svg" alt="company6">
-                <img class="logo" src="./assets/asset 9.png" alt="company7">
+                <img class="logo" src="./assets/asset 3.png" alt="">
+                <img class="logo" src="./assets/asset 4.png" alt="">
+                <img class="logo" src="./assets/asset 5.png" alt="">
+                <img class="logo" src="./assets/asset 6.png" alt="">
+                <img class="logo" src="./assets/asset 7.png" alt="">
+                <img class="logo" src="./assets/asset 8.svg" alt="">
+                <img class="logo" src="./assets/asset 9.png" alt="">
             </div>
         </div>
     </section>
@@ -141,7 +145,7 @@
     </section>
 
     <section class="big-feature-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container" id="second-big-feature">
             <div class="feature-img">
                 <img src="./assets/asset 21.png" alt="">
             </div>
@@ -222,7 +226,7 @@
     <footer>
         <div class="container flex footer-container">
             <a href="#" class="company-logo">
-                <img src="./assets/asset 1.png" alt="company logo">
+                <img src="/assets/asset 1.png" alt="company logo">
             </a>
             <div class="link-column flex">
                 <h4>Product</h4>
@@ -275,6 +279,15 @@
 
 
     <script src="https://kit.fontawesome.com/675a04593a.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButoon = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        
+        toggleButoon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+    </script>
 </body>
 </html>
 
